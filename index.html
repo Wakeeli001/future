@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3MTT Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="initialPage">
+            <h2>Welcome to 3MTT Team Work</h2>
+            <p>Login or Sign Up</p>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username (Email or Phone)">
+                <input type="password" id="password" placeholder="Password">
+                <button type="button" onclick="login()">Login</button>
+                <p><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+            </form>
+            <form id="signUpForm">
+                <input type="text" id="firstName" placeholder="First Name">
+                <input type="text" id="middleName" placeholder="Middle Name (Optional)">
+                <input type="text" id="lastName" placeholder="Surname">
+                <input type="text" id="email" placeholder="Email">
+                <input type="password" id="signUpPassword" placeholder="Password">
+                <button type="button" onclick="signUp()">Sign Up</button>
+            </form>
+        </div>
+
+        <div class="homepage" id="homepage" style="display:none;">
+            <h2>Welcome to the 3MTT Team Work Innovation</h2>
+            <p>Book patient appointment/hand card online to save time and avoid delays.</p>
+            <button onclick="showBookingForm()">Book for Hand Card</button>
+            <div class="menu">
+                <div onclick="showSection('home')">Home</div>
+                <div onclick="showSection('myBookings')">My Bookings</div>
+                <div onclick="showSection('support')">Support</div>
+            </div>
+            <div id="bookingForm" style="display:none;">
+                <input type="text" id="patientName" placeholder="Name of the Patient">
+                <input type="number" id="patientAge" placeholder="Age of the Patient">
+                <input type="text" id="patientState" placeholder="State">
+                <input type="text" id="patientLGA" placeholder="LGA of the Patient">
+                <input type="text" id="patientCity" placeholder="City or Ward">
+                <input type="text" id="patientPhone" placeholder="+234">
+                <button onclick="submitBooking()">Submit</button>
+                <p id="ticketId" style="display:none;">Your Ticket ID: <span></span></p>
+            </div>
+            <div id="myBookings" style="display:none;">
+                <p id="bookingStatus">No bookings applied for.</p>
+            </div>
+            <div id="support" style="display:none;">
+                <p>For help, contact us:</p>
+                <p>08143999391</p>
+                <p>ibrahimabubakarwakili403@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
